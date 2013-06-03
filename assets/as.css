@@ -10,7 +10,7 @@
  *********************************************/
 body {
   background: #fff;
-  background-color: #fff; }
+  background-color: #fff;}
 
 .reveal {
   font-family: Georgia, Serif;
@@ -18,7 +18,7 @@ body {
   font-size: 36px;
   font-weight: 200;
   letter-spacing: -0.02em;
-  color: black; }
+  color: #111; }
 
 ::selection {
   color: white;
@@ -37,13 +37,36 @@ body {
   margin: 0 0 20px 0;
   color: #333;
   font-family: Georgia, Serif;
-  line-height: 0.9em;
+  line-height: 1em;
   letter-spacing: 0.02em;
   text-transform: none;
   text-shadow: none; }
 
 .reveal h1 {
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+  font-size: 3em;
+  color: #D40B6B;}
+
+.reveal blockquote{
+  color: #444;
+  font-size: 1.5em;
+  line-height: 1.1em;
+  box-shadow: none;
+  padding: 1em;
+}
+.reveal section.full-image{
+  background-size: cover;
+  border:1px solid red;
+}
+.reveal .viewer{
+  overflow: scroll;
+  height: 600px;
+  width:100%;
+  border: 1px solid #333;
+  border-top: 20px solid #333;
+}
+.reveal .viewer img{
+  height: 100%;
+}
 
 /*********************************************
  * LINKS
@@ -88,6 +111,33 @@ body {
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
+
+
+ .reveal .controls div {
+  border: 20px solid transparent;
+ }
+  .reveal .controls div.navigate-left {
+    top: 40px;
+    border-right-width: 20px;
+    border-right-color: #eee;
+  }
+  .reveal .controls div.navigate-right {
+    left: 80px;
+    top: 40px;
+    border-left-width: 20px;
+  }
+  .reveal .controls div.navigate-up {
+    left: 40px;
+    border-bottom-width: 20px;
+  }
+  .reveal .controls div.navigate-down {
+    left: 40px;
+    top: 80px;
+    border-top-width: 20px;
+  }
+
+
+ 
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
   border-right-color: #474747; }
@@ -116,6 +166,9 @@ body {
 .reveal .controls div.navigate-down.enabled:hover {
   border-top-color: #7d7d7d; }
 
+
+
+
 /*********************************************
  * PROGRESS BAR
  *********************************************/
@@ -125,3 +178,11 @@ body {
 .reveal .progress span {
   background: #D40B6B;
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+body{
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NIDwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApIC0tPg0gPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjAvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMtU1ZHLTIwMDEwOTA0L0RURC9zdmcxMC5kdGQiPg0gPHN2ZyB2ZXJzaW9uPSIxLjAiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINIHdpZHRoPSI2MHB4IiBoZWlnaHQ9IjY1cHgiIHZpZXdCb3g9IjAgMCA2MCA2NSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNjAgNjUiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0gPHBhdGggZmlsbD0iI0Q0MEI2QiIgZD0iTTIzLjU2OSwwTDAsNjVoMTIuMzM1bDQuNTIyLTEzLjA3aDI0LjgyTDQ2LjMxOCw2NWgxMy4xNTZMMzUuODU3LDBIMjMuNTY5eiBNMjAuNTg1LDQwLjk4NWw4LjY3NS0yNS4wMzQNIGw4LjUzMiwyNS4wMzRIMjAuNTg1TDIwLjU4NSw0MC45ODV6Ii8+DSA8L3N2Zz4N) 3% 95% no-repeat;
+  background-size: 30px;
+}
