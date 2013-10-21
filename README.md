@@ -1,4 +1,6 @@
-presentation
+Presentation
 ============
 
-Base for Antistatique presentations
+URL : http://antistatique.github.io/presentation
+
+HTML/Reveal.js Base for Antistatique presentations
