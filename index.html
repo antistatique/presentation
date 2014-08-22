@@ -22,30 +22,36 @@
   <!-- For syntax highlighting -->
   <link rel="stylesheet" href="assets/revealjs/lib/css/zenburn.css">
 
-  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
   <script>
-  document.write( '<link rel="stylesheet" href="assets/revealjs/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    if( window.location.search.match( /print-pdf/gi ) ) {
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = 'css/print/pdf.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
   </script>
 
   <style type="text/css">
-  .reveal section img {
-    background: transparent;
-    border: none;
-    box-shadow: 0 0 0 transparent;
-  }
+    .reveal section img {
+      background: transparent;
+      border: none;
+      box-shadow: 0 0 0 transparent;
+    }
 
-  .member{
-    display:inline-block;
-    text-align: left;
-    padding: 1em;
-  }
-  .member .photo{
-    max-width: 200px;
-  }
-  .member h4, .member p{
-    font-size: 16px;
-    margin: 0;
-  }
+    .member{
+      display:inline-block;
+      text-align: left;
+      padding: 1em;
+    }
+    .member .photo{
+      max-width: 200px;
+    }
+    .member h4, .member p{
+      font-size: 16px;
+      margin: 0;
+    }
 
 
   </style>
@@ -184,7 +190,7 @@
           ]
         });
 
-</script>
-youpi
-</body>
-</html>
+      </script>
+      youpi
+    </body>
+    </html>
